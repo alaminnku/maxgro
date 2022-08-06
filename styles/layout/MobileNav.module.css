@@ -1,0 +1,17 @@
+.MobileNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.MobileNav svg {
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: var(--darkCharcoal);
+}
+
+@media (min-width: 768px) {
+  .MobileNav {
+    display: none;
+  }
+}

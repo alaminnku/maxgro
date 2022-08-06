@@ -1,0 +1,178 @@
+.Cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  height: 100%;
+  z-index: 10;
+  overflow-y: scroll;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  transition: 200ms ease-in-out;
+}
+
+.Cart.Open {
+  right: 0;
+}
+
+.CartTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--almostWhite);
+}
+
+.CartTop p {
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+}
+
+.CartTop p svg {
+  font-size: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+.CloseIcon {
+  cursor: pointer;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0.25rem;
+  border-radius: 100%;
+  background-color: var(--almostWhite);
+}
+
+.ItemsAndCheckout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 9rem);
+}
+
+.EmptyCart {
+  margin-top: 1rem;
+}
+
+.Item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0rem;
+  border-bottom: 1px solid var(--almostWhite);
+}
+
+.Quantity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+
+.Quantity p {
+  padding: 0.5rem 0rem;
+}
+
+.Quantity svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.3rem;
+  cursor: pointer;
+  border-radius: 100%;
+  color: var(--gainsboro);
+  border: 1px solid var(--gainsboro);
+}
+
+.Quantity svg.Enabled,
+.Quantity svg:first-child {
+  color: var(--darkCharcoal);
+  border: 1.5px solid var(--lightSlateGrey);
+  transition: all 200ms ease-in-out;
+}
+
+.Image {
+  width: 25%;
+  margin-right: 0.75rem;
+}
+
+.Image img {
+  border-radius: 0.25rem;
+}
+
+.Content {
+  width: 50%;
+  margin-right: 0.5rem;
+}
+
+.Content p {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.Content small {
+  display: block;
+  font-size: 0.75rem;
+  margin: 0.65rem 0rem;
+  color: var(--lightSlateGrey);
+}
+
+.Content p:last-child {
+  color: var(--midnightGreen);
+}
+
+.Delete svg {
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: var(--lightSlateGrey);
+}
+
+.Checkout {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  color: var(--almostWhite);
+  background-color: var(--midnightGreen);
+}
+
+.Overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  pointer-events: none;
+  transition: all 250ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Overlay.Open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (min-width: 768px) {
+  .Cart {
+    width: 40vw;
+  }
+
+  .ItemsAndCheckout {
+    min-height: calc(100vh - 6rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .Cart {
+    width: 35vw;
+    max-width: 25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ItemsAndCheckout {
+    min-height: calc(100vh - 4.5rem);
+  }
+}

@@ -1,0 +1,63 @@
+.MobileMenu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  transition: 200ms ease-in-out;
+}
+
+.MobileMenu.Open {
+  left: 0;
+}
+
+.MobileMenu svg {
+  cursor: pointer;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0.25rem;
+  border-radius: 100%;
+  margin-bottom: 0.5rem;
+  color: var(--darkCharcoal);
+  background-color: var(--almostWhite);
+}
+
+.Navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+.Navigation a {
+  padding: 0.5rem 0rem;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: var(--darkCharcoal);
+  border-bottom: 1px solid var(--gainsboro);
+}
+
+.Overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Overlay.Open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (min-width: 768px) {
+  .MobileMenu {
+    width: 30vw;
+  }
+}
